@@ -46,6 +46,7 @@
                 <th>Nama Mahasiswa</th>
                 <th>Kelas</th>
                 <th>Dosen</th>
+                <th>Mata Kuliah</th>
                 <th>Tanggal</th>
                 <th>Status</th>
             </tr>
@@ -56,6 +57,7 @@
                     <td>{{ $absen->mahasiswa->nama ?? '-' }}</td>
                     <td>{{ $absen->kelas->nama_kelas ?? '-' }}</td>
                     <td>{{ $absen->dosen->nama ?? '-' }}</td>
+                    <td>{{ $absen->matkul->nama_matkul ?? '-' }}</td>
                     <td>{{ $absen->tanggal }}</td>
                     <td>{{ $absen->status_keterangan }}</td>
                 </tr>
