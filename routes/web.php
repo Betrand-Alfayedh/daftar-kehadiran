@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::middleware(['auth', RoleAdmin::class])->group(function () {
     Route::resource('kelas', KelasController::class);
    
-    Route::resource('dosen', DosenController::class);
+    
 
     Route::resource('matkul', MatkulController::class);
 });
@@ -26,6 +26,7 @@ Route::middleware(['auth', RoleAdmin::class])->group(function () {
 Route::get('/absensi/preview/{id_kelas}', [AbsensiMahasiswaController::class, 'preview'])->name('absensi.preview');
  Route::resource('absensi', AbsensiMahasiswaController::class);
     Route::resource('mahasiswa', MahasiswaController::class);
+    Route::resource('dosen', DosenController::class);
 
 
 
